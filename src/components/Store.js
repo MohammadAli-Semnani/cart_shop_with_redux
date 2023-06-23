@@ -16,7 +16,7 @@ const Store = () => {
     const dispatch = useDispatch()
 
     useEffect(() => {
-       dispatch(fetchProducts()) 
+        !productsState.products.length && dispatch(fetchProducts())
     },[])
 
     return (
