@@ -1,7 +1,6 @@
-import React, { useContext } from 'react';
+import React from 'react';
 
-// Context
-import { CartContext } from '../../context/CartContextProvider';
+
 
 // Functions
 import { shorten } from '../../helper/functions';
@@ -11,8 +10,9 @@ import trashIcon from "../../assets/icons/trash.svg";
 
 // Style
 import styles from "./Cart.module.css";
+
+//Redux
 import { decrease, increase, remove_item } from '../../redux/carts/cartsAction';
-import { useDebugValue } from 'react';
 import { useDispatch } from 'react-redux';
 
 const Cart = (props) => {

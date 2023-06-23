@@ -1,14 +1,14 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-// Context
-import { CartContext } from '../../context/CartContextProvider';
+
 
 // Icons
 import shopIcon from "../../assets/icons/shop.svg";
 
 // Style
 import styles from "./Navbar.module.css";
+//Redux
 import { useSelector } from 'react-redux';
 
 const Navbar = () => {

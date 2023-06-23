@@ -1,11 +1,9 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-
-// Context
-import { ProductsContext } from '../context/ProductContextProvider';
 
 // Style
 import styles from "./ProductDetails.module.css";
+//Redux
 import { useSelector } from 'react-redux';
 
 const ProductDetails = (props) => {
