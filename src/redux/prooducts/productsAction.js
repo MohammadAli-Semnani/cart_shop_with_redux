@@ -18,7 +18,7 @@ const fetch_product_faild = (error) => {
     }
 }
 
-const fetchProducts = (dispatch) => { 
+const fetchProducts = () => { 
     return (dispatch) => {
 
         const BASE_URL = "https://fakestoreapi.com";
