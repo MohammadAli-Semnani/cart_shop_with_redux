@@ -9,10 +9,11 @@ import shopIcon from "../../assets/icons/shop.svg";
 
 // Style
 import styles from "./Navbar.module.css";
+import { useSelector } from 'react-redux';
 
 const Navbar = () => {
 
-    const {state} = useContext(CartContext);
+    const state = useSelector(state => state.cartsState);
 
     return (
         <div className={styles.mainContainer}>

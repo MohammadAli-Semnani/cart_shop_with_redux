@@ -15,7 +15,7 @@ function App() {
   return (
     
       <Provider store={store}>
-        {/* <Navbar /> */}
+        <Navbar />
         <Switch>
           <Route path="/products/:id" component={ProductDetails} />
           <Route path="/products" component={Store} />

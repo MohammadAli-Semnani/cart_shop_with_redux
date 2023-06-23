@@ -6,6 +6,10 @@
   margin-top: 150px;
   padding: 0 150px;
 }
+.loder{
+  margin: 0 auto;
+  align-items: center;
+}
 
 @media (max-width: 1200px) {
   .container {

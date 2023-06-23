@@ -11,10 +11,13 @@ import trashIcon from "../../assets/icons/trash.svg";
 
 // Style
 import styles from "./Cart.module.css";
+import { decrease, increase, remove_item } from '../../redux/carts/cartsAction';
+import { useDebugValue } from 'react';
+import { useDispatch } from 'react-redux';
 
 const Cart = (props) => {
 
-    const {dispatch} = useContext(CartContext);
+    const dispatch = useDispatch();
     const {image, title, price, quantity} = props.data;
 
     return (
@@ -30,10 +33,10 @@ const Cart = (props) => {
             <div className={styles.buttonContainer}>
                 {
                     quantity > 1 ? 
-                    <button onClick={() => dispatch({type: "DECREASE", payload: props.data})} >-</button> :
-                    <button onClick={() => dispatch({type: "REMOVE_ITEM", payload: props.data})} ><img src={trashIcon} alt="trash" /></button>
+                    <button onClick={() => dispatch(decrease(props.data))} >-</button> :
+                    <button onClick={() => dispatch(remove_item(props.data))} ><img src={trashIcon} alt="trash" /></button>
                 }
-                <button onClick={() => dispatch({type: "INCREASE", payload: props.data})} >+</button>
+                <button onClick={() => dispatch(increase(props.data))} >+</button>
             </div>
         </div>
     );
